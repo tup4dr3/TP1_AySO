@@ -1,0 +1,46 @@
+ssh-keygen -t ed25519
+cat $HOME/.ssh/*.pub
+cd
+pwd
+mkdir repogit
+ll
+cd repogit/
+ll
+git clone git@github.com:tup4dr3/TP1_AySO.git
+cd TP1_AySO/
+pwd
+ls -l
+cas /etc/os-release
+cat /etc/os-release
+man grep
+grep HOME_URL /etc/os-release
+grep home_url /etc/os-release 
+grep home_url /etc/os-release
+grep -i Home_url /etc/os-release
+whoami
+echo “Usuario=$(whoami)” > datos_usuario.txt 
+ll
+cat datos_usuario.txt 
+git add .
+git status
+git config --global user.email "lucasviamont98@gmail.com"
+git config --global user.name "tup4dr3"
+git commit -m "ADD: agregado 1er ejercicio sobre datos_usuarios.txt"
+git status
+git push
+ll
+cat datos_usuario.txt 
+grep "model name" /proc/cpuinfo | head -n1 >> datos_usuarios.txt
+cat datos_usuarios.txt 
+git add .
+git commit -m "feat: Añadiendo información de CPU"
+ll
+cat <<EOF>> README.md
+Alumno: Lucas Viamont
+Division: 313 Turno: Noche
+EOF
+
+git add README.md datos_usuarios.txt
+git commit -m "ADD: Añadiendo Readme y datos de usuario"
+git push
+history -a
